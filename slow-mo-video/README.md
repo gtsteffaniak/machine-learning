@@ -3,6 +3,17 @@ PyTorch implementation of "Super SloMo: High Quality Estimation of Multiple Inte
 
 __Check out [our paper](https://github.com/avinashpaliwal/Deep-SloMo) "Deep Slow Motion Video Reconstruction with Hybrid Imaging System" published in TPAMI.__
 
+# gtsteffaniak changes
+
+This project is directly based on the referenced project, but I had made a few minor changes which dramatically improve upon the original.
+
+### Improvements
+
+ * Updated ffmpeg to output compressed jpg rather than uncompressed png for 1/15th the space
+ * Updated PIL to use jpg images
+ * Updated ffmpeg to create video using mp4 compression, resulting in 1/100th the output file size
+ * Updated the pytorch to use CUDA GPU for everything , which slightly increases VRAM usage and slightly improves processing time.
+
 ## Results
 Results on UCF101 dataset using the [evaluation script](https://people.cs.umass.edu/~hzjiang/projects/superslomo/UCF101_results.zip) provided by paper's author. The `get_results_bug_fixed.sh` script was used. It uses motions masks when calculating PSNR, SSIM and IE.
 
