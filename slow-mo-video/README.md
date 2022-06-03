@@ -9,10 +9,13 @@ This project is directly based on the referenced project, but I had made a few m
 
 ### Improvements
 
+NOTE: currently filesystem paths are designed for WINDOWS and may not work on linux
+
  * Updated ffmpeg to output compressed jpg rather than uncompressed png for 1/15th the space
  * Updated PIL to use jpg images
  * Updated ffmpeg to create video using mp4 compression, resulting in 1/100th the output file size
  * Updated the pytorch to use CUDA GPU for everything , which slightly increases VRAM usage and slightly improves processing time.
+ * Updated tmp folder to use a seperate path for each run, allowing for simultaneous video processing.
 
 ## Results
 Results on UCF101 dataset using the [evaluation script](https://people.cs.umass.edu/~hzjiang/projects/superslomo/UCF101_results.zip) provided by paper's author. The `get_results_bug_fixed.sh` script was used. It uses motions masks when calculating PSNR, SSIM and IE.
